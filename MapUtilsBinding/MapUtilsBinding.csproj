@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Google.iOS.Maps" Version="6.0.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="GoogleMapsUtils.xcframework">
+      <Kind>Framework</Kind>
+      <SmartLink>True</SmartLink>      
+    </NativeReference>
+  </ItemGroup>
+</Project>
