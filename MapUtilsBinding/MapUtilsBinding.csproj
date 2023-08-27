@@ -12,11 +12,15 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Google.iOS.Maps" Version="6.0.1.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="GoogleMapsUtils.xcframework">
       <Kind>Framework</Kind>
       <SmartLink>True</SmartLink>      
-    </NativeReference>
+      <ForceLoad>True</ForceLoad>     
+   <LinkerFlags>-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib/swift/ -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/swift/ -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -Wl,-rpath -Wl,@executable_path/Frameworks</LinkerFlags>
+		</NativeReference>
+   
   </ItemGroup>
 </Project>
