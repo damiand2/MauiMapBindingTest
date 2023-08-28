@@ -36,6 +36,9 @@
 	  <WarningLevel>4</WarningLevel>
 	  <DocumentationFile></DocumentationFile>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -59,16 +62,7 @@
 		<PackageReference Include="Xamarin.Google.iOS.Maps" Version="6.0.1.1" />
 		<PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
 		<PackageReference Include="Onion.Maui.GoogleMaps" Version="5.0.1" />
+		<PackageReference Include="MapUtilsBinding" Version="1.0.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\MapUtilsBinding\MapUtilsBinding.csproj" />
-	</ItemGroup>
-<!--<Target Name="dde1" BeforeTargets="_CollectBundleResources">
-	<Exec Command="echo dde1 $(_GoogleMapsSDKBaseFolder)" ></Exec>
-	<PropertyGroup>
-		<_GoogleMapsSDKBaseFolder>/Users/damiandekoszczak/Library/Caches/XamarinBuildDownload/GMps-6.0.1/Maps/Frameworks/</_GoogleMapsSDKBaseFolder> 
-    </PropertyGroup>
-	<Exec Command="echo dde1 $(_GoogleMapsSDKBaseFolder)" ></Exec>
-</Target> -->
 </Project>
