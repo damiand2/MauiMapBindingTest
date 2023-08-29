@@ -1,0 +1,5 @@
+﻿<Project>
+	<PropertyGroup>
+		<XamarinBuildDownloadDir>$(HOME)\Library\Caches\XamarinBuildDownload\</XamarinBuildDownloadDir>
+	</PropertyGroup>
+</Project>
