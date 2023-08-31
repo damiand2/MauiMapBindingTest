@@ -4,7 +4,57 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.0</SupportedOSPlatformVersion>
+    <PackOnBuild>true</PackOnBuild>
   </PropertyGroup>
+  <PropertyGroup>
+		<PackageId>MapUtilsBinding</PackageId>
+		<Title>MapUtilsBinding</Title>
+		<Summary>GoogleMapsUtils library for projects using .NET MAUI</Summary>
+		<Authors>Damian</Authors>
+		<Owners>$(Authors)</Owners>
+		<Company>$(Authors)</Company>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<Product>MapUtilsBinding ($(TargetFramework))</Product>
+		<Copyright>Copyright © $([System.DateTime]::Today.ToString(yyyy)) $(Authors)</Copyright>
+		<PackageDescription>$(Description)</PackageDescription>
+		<PackageLicenseFile></PackageLicenseFile>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageProjectUrl></PackageProjectUrl>
+		<RepositoryType></RepositoryType>
+		<RepositoryUrl></RepositoryUrl>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		<DefineConstants>$(DefineConstants);</DefineConstants>
+		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+		<Description>
+			$(Summary)
+			Set of Maui bindings of Google Maps Utility for iOS - $(PackageId)
+		</Description>
+		<PackageReleaseNotes>
+			Native Library version:
+			[iOS] GoogleMapsUtils 4.1.0
+			[Android] GoogleMapsUtils 2.4.0			
+		</PackageReleaseNotes>
+		<PublishRepositoryUrl>false</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<ContinuousIntegrationBuild>false</ContinuousIntegrationBuild>
+		<PackageIcon></PackageIcon>
+		<Product>$(AssemblyName) ($(TargetFramework))</Product>
+		<FileVersion>$(Version)</FileVersion>
+		<AssemblyVersion>$(Version)</AssemblyVersion>
+		<AssemblyFileVersion>$(Version)</AssemblyFileVersion>
+		<Version>1.0.1</Version>
+		<VersionPrefix></VersionPrefix>
+		<VersionSuffix></VersionSuffix>
+		<PackageVersion>$(VersionPrefix)$(Version)$(VersionSuffix)</PackageVersion>
+		<PackageTags>maui, ios, android, google, map, maps, utils, utility, heatmap, kml, geo, json, cluster, clustering, marker, pin, location</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<Configurations>Debug;Release</Configurations>
+		<NoWarn>1587,1591</NoWarn>
+	</PropertyGroup>
 
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />

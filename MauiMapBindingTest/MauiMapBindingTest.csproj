@@ -62,7 +62,7 @@
 		<PackageReference Include="Xamarin.Google.iOS.Maps" Version="6.0.1.1" />
 		<PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
 		<PackageReference Include="Onion.Maui.GoogleMaps" Version="5.0.1" />
-		<PackageReference Include="MapUtilsBinding" Version="1.0.0" />
+		<PackageReference Include="MapUtilsBinding" Version="1.0.1" />
 	</ItemGroup>
 
 	<Target Name="LinkWithSwift" DependsOnTargets="_ParseBundlerArguments;_DetectSdkLocations" BeforeTargets="_LinkNativeExecutable">
@@ -71,7 +71,7 @@
 			<_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('ios-'))">iphoneos</_SwiftPlatform>
 		</PropertyGroup>
 		
-		<Exec Command="echo dde1 $(_SwiftPlatform)" ></Exec>
+		<Exec Command="echo dde1 $(_SwiftPlatform)"></Exec>
 
 		<ItemGroup>
 			<_CustomLinkFlags Include="-L" />
