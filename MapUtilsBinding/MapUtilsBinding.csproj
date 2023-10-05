@@ -70,7 +70,6 @@
       <SmartLink>True</SmartLink>      
       <ForceLoad>False</ForceLoad>     
 </NativeReference>
-
   </ItemGroup>
 
 </Project>
